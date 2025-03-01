@@ -41727,7 +41727,7 @@ async function run() {
     const path = __nccwpck_require__(6928);
 
     if (rawDiffFile) {
-      const filePath = path.join(__dirname, rawDiffFile);
+      const filePath = path.join(process.cwd(), rawDiffFile);
       const fs = __nccwpck_require__(9896);
       rawDiff = fs.readFileSync(filePath, 'utf8');
     }

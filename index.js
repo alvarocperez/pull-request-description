@@ -10,7 +10,7 @@ async function run() {
     const path = require('path');
 
     if (rawDiffFile) {
-      const filePath = path.join(__dirname, rawDiffFile);
+      const filePath = path.join(process.cwd(), rawDiffFile);
       const fs = require('fs');
       rawDiff = fs.readFileSync(filePath, 'utf8');
     }
