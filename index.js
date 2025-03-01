@@ -7,6 +7,7 @@ async function run() {
     const prompt = core.getInput('prompt');
     let rawDiff = core.getInput('git_diff');
     const rawDiffFile = core.getInput('git_diff_file');
+    const path = require('path');
 
     if (rawDiffFile) {
       const filePath = path.join(__dirname, rawDiffFile);
